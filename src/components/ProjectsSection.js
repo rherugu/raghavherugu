@@ -100,42 +100,9 @@ function ProjectsSectionComponent() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    
     {
       id: 1,
-      title: 'Greenstick LLC',
-      description:
-        'Co-founded Greenstick, an AI-powered platform teaching financial markets through interactive lessons and simulations.',
-      image: require('../assets/greenstick.jpg'), // Replace with actual image paths
-      tools: [
-        'React.js',
-        'Node.js',
-        'Express.js',
-        'TensorFlow.js',
-        'Chart.js',
-        'TradingView Widgets',
-        'Python',
-        'Pandas',
-        'NumPy',
-        'Scikit-learn',
-        'Neural Networks',
-        'Financial Modeling',
-        'Project Finance',
-        'Market Analysis',
-      ],
-      details: `Launched Greenstick, an AI-powered platform that teaches financial markets through interactive lessons and simulations to teach financial market strategies, including stocks, options, futures trading, and more.
-
-Led the development of quant-based courses, algorithm generators, and trading signals, collaborating closely with the team to deliver cutting-edge financial education tools.
-
-Created and structured comprehensive learning materials, integrating React.js, Chart.js, and TradingView widgets for an immersive user experience.
-
-Researched about trading and quantitative finance, presenting the information on the platform through a mixture of text, videos, animations, and simulations. The platform also includes an AI bot that answers user questions, ensuring a personalized learning experience.
-
-Coordinated project finance, market analysis and strategic growth initiatives to drive the company’s growth.
-
-Initiated outreach and marketing campaigns to attract a broader user base, while continuously enhancing the platform’s features and user interface.`,
-    },
-    {
-      id: 2,
       title: 'LocalMainStreet',
       description:
         'Founded LocalMainStreet to support local businesses during the COVID-19 crisis.',
@@ -166,7 +133,7 @@ Amassed over 90 small mom-and-pop shops on the platform.
 Endorsed and recognized on the township website.`,
     },
     {
-      id: 3,
+      id: 2,
       title: 'JILA',
       description:
         'Co-founded JILA, a platform designed to boost local economies by offering tax benefits to residents.',
@@ -195,6 +162,40 @@ Engineered the backend infrastructure with MongoDB and Express.js to ensure robu
 
 Actively pitching this product to local towns in NJ to gauge interest and generate potential partnerships.`,
     },
+    {
+        id: 3,
+        title: 'Greenstick LLC',
+        description:
+          'Co-founded Greenstick, an AI-powered platform teaching financial markets through interactive lessons and simulations.',
+        image: require('../assets/greenstick.jpg'), // Replace with actual image paths
+        tools: [
+          'React.js',
+          'Node.js',
+          'Express.js',
+          'TensorFlow.js',
+          'Chart.js',
+          'TradingView Widgets',
+          'Python',
+          'Pandas',
+          'NumPy',
+          'Scikit-learn',
+          'Neural Networks',
+          'Financial Modeling',
+          'Project Finance',
+          'Market Analysis',
+        ],
+        details: `Launched Greenstick, an AI-powered platform that teaches financial markets through interactive lessons and simulations to teach financial market strategies, including stocks, options, futures trading, and more.
+  
+  Led the development of quant-based courses, algorithm generators, and trading signals, collaborating closely with the team to deliver cutting-edge financial education tools.
+  
+  Created and structured comprehensive learning materials, integrating React.js, Chart.js, and TradingView widgets for an immersive user experience.
+  
+  Researched about trading and quantitative finance, presenting the information on the platform through a mixture of text, videos, animations, and simulations. The platform also includes an AI bot that answers user questions, ensuring a personalized learning experience.
+  
+  Coordinated project finance, market analysis and strategic growth initiatives to drive the company’s growth.
+  
+  Initiated outreach and marketing campaigns to attract a broader user base, while continuously enhancing the platform’s features and user interface.`,
+      },
     {
       id: 4,
       title: 'Books2Go',

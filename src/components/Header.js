@@ -9,6 +9,7 @@ const HeaderContainer = styled.header`
   padding: 20px 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Added this line */
   z-index: 100;
   background: rgba(14, 14, 14, 0.8);
   backdrop-filter: blur(5px);
@@ -23,20 +24,23 @@ const Logo = styled.h1`
   font-family: 'Playfair Display', serif;
   cursor: pointer;
   color: #fff;
+  margin: 0; /* Added this line */
 `;
 
 const NavLinks = styled.nav`
   display: flex;
+  align-items: center; /* Added this line */
 
   a {
     margin-left: 30px;
     font-size: 1rem;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins-black', sans-serif;
     cursor: pointer;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 5px 0; /* Added this line */
 
     &:hover {
       color: #ff7e5f;
@@ -53,7 +57,7 @@ const NavLinks = styled.nav`
       height: 2px;
       background: #ff7e5f;
       left: 0;
-      bottom: -5px;
+      bottom: 0; /* Changed from 'bottom: 5px' to 'bottom: 0' */
       transition: width 0.3s ease;
     }
   }
@@ -68,7 +72,7 @@ function Header() {
     <HeaderContainer>
       <Logo>
         <Link to="home" smooth={true} duration={500}>
-          R.H.
+          RH
         </Link>
       </Logo>
       <NavLinks>
@@ -77,9 +81,6 @@ function Header() {
         </Link>
         <Link to="projects" smooth={true} duration={500}>
           Projects
-        </Link>
-        <Link to="experience" smooth={true} duration={500}>
-          Experience
         </Link>
         <Link to="contact" smooth={true} duration={500}>
           Contact

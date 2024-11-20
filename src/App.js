@@ -34,7 +34,6 @@ function App() {
         <ProjectsSection />
         <ContactSection />
       </main>
-      <Footer />
     </ThemeProvider>
   );
 }

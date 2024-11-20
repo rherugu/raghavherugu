@@ -12,6 +12,7 @@ const Indicator = styled.div`
   background: linear-gradient(#ff7e5f, #feb47b);
   border-radius: 2px;
   overflow: hidden;
+  z-index:99999;
 `;
 
 const Progress = styled.div`
