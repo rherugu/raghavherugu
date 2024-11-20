@@ -130,7 +130,15 @@ Went door-to-door to pitch the platform to struggling local businesses.
 
 Amassed over 90 small mom-and-pop shops on the platform.
 
-Endorsed and recognized on the township website.`,
+Received media attention, including an article on Patch.com highlighting our efforts to support small businesses during the pandemic.
+
+Endorsed and recognized on the Marlboro Township website. 
+
+Links: `,
+links: [
+    'https://patch.com/new-jersey/marlboro-coltsneck/marlboro-family-develops-app-support-small-businesses',
+    'https://www.marlboro-nj.gov/local-main-street-gift-card-program?highlight=WyJsb2NhbCIsIm1haW4iLCJzdHJlZXQiXQ==',
+]
     },
     {
       id: 2,

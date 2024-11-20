@@ -77,6 +77,17 @@ const ToolItem = styled.span`
   font-family: 'Poppins', sans-serif;
 `;
 
+const StyledLink = styled.a`
+  color: #ff7e5f;
+  text-decoration: none;
+  margin: 5px 0;
+  font-family: 'Poppins', sans-serif;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const AnimatedLink = styled(motion.a)`
   display: inline-block;
   padding: 15px 30px;
@@ -164,7 +175,21 @@ function ProjectModal({ project, onClose }) {
         <ModalTitle>{project.title}</ModalTitle>
         <ModalImage src={project.image} alt={project.title} />
         <ModalDescription>{project.details}</ModalDescription>
+        {project.links && project.links.length > 0 && (
+          <div>
+            {project.links.map((link, index) => (
+                <div> 
+              <StyledLink key={index} href={link} target="_blank" rel="noopener noreferrer">
+                {link}
+              </StyledLink>
+              <br></br><br></br></div>
+            ))}
+          </div>
+        )}
+        <br></br>
+        <br></br>
         <h3>Tools Used:</h3>
+        <br></br>
         <ToolsList>
           {project.tools.map((tool, index) => (
             <ToolItem key={index}>{tool}</ToolItem>
