@@ -125,8 +125,9 @@ function HeroSection() {
           initial={{ y: '100%', opacity: 0 }}
           animate={{ y: '0%', opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+          style={{ width: '600px' }}
         >
-          Developer • Innovator • Financial Student
+          High school senior passionate about app development, web design, and the financial markets, with career interests in technology, finance, and entrepreneurship.
         </Subtitle>
       </HeroContent>
     </Hero>

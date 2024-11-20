@@ -86,6 +86,7 @@ function Header() {
           Contact
         </Link>
       </NavLinks>
+      
     </HeaderContainer>
   );
 }

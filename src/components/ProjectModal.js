@@ -152,7 +152,7 @@ function ProjectModal({ project, onClose }) {
       projectLink = 'https://doi.org/10.70121/001c.121778';
       break;
     default:
-      projectLink = '';
+      projectLink = 'http://185.193.158.189:3001/register';
       break;
   }
 

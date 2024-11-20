@@ -56,7 +56,7 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterContent>
-        <FooterText>&copy; {new Date().getFullYear()} Raghav Herugu. All rights reserved.</FooterText>
+        <FooterText>{new Date().getFullYear()} Raghav Herugu. All rights reserved.</FooterText>
         <SocialMedia>
           <a href="https://github.com/rherugu" target="_blank" rel="noopener noreferrer">
             <FaGithub />
