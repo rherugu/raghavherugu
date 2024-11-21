@@ -119,11 +119,11 @@ function ProjectsSectionComponent() {
         'Heroku Deployment',
         'UI/UX Design',
       ],
-      details: `LocalMainStreet was born out of a deep commitment to uplift local businesses during the unprecedented challenges posed by the COVID-19 pandemic. This innovative platform empowers customers to purchase gift cards and digital vouchers, providing essential financial support to local shops struggling to stay afloat. 
-
-      I spearheaded the development of both the website and mobile application, utilizing React.js for a seamless user experience and MongoDB for efficient data management. The integration of Stripe ensured secure transactions, while my hands-on approach included direct outreach to local businesses, resulting in partnerships with over 90 small enterprises. 
-
-      Our efforts garnered significant media attention, including a feature on Patch.com, which highlighted our mission to foster community resilience. The project not only provided immediate financial relief but also laid the groundwork for a sustainable ecosystem that continues to thrive beyond the pandemic.`,
+      links: [
+        'https://patch.com/new-jersey/marlboro-coltsneck/marlboro-family-develops-app-support-small-businesses',
+        'https://www.marlboro-nj.gov/local-main-street-gift-card-program?highlight=WyJsb2NhbCIsIm1haW4iLCJzdHJlZXQiXQ=='
+      ],
+      details: 'I founded LocalMainStreet to support small businesses during the COVID-19 crisis. The platform enabled customers to purchase digital gift cards and vouchers from local shops, providing immediate income to businesses affected by lockdowns. I developed both the website and mobile app using React.js and MongoDB, integrating secure payment processing with Stripe. By going door-to-door and leveraging social media, I onboarded over 90 local businesses, many of them minority-owned. The initiative was endorsed by the township and recognized on their website, helping to strengthen our community during challenging times.',
     },
     {
       id: 2,
@@ -145,11 +145,7 @@ function ProjectsSectionComponent() {
         'UI/UX Design',
         'Heroku Deployment',
       ],
-      details: `JILA emerged from a vision to revitalize local economies by leveraging legislative frameworks to provide tax incentives for residents. As a co-founder, I played a pivotal role in designing and developing three core modules tailored for residents, business owners, and administrative users.
-
-      The platform's front-end was crafted using React.js, ensuring a dynamic and responsive user interface, while the backend was fortified with MongoDB and Express.js for robust data handling. My efforts included extensive outreach to local municipalities in New Jersey, where I actively pitched the platform to gauge interest and foster potential partnerships. 
-
-      JILA not only aims to stimulate local commerce but also serves as a model for community-driven economic development, showcasing the power of technology in creating sustainable solutions.`,
+      details: 'As a co-founder and lead developer at JILA, I built a platform to boost local economies by offering residents tax benefits for shopping locally. Leveraging New Jersey’s legislation (A4806), JILA connects residents and businesses: local shops provide a percentage discount on transactions that residents can use toward their property taxes. I engineered three key modules—for residents, businesses, and admins—using React.js for the front end and MongoDB with Express.js for the back end. We integrated an API to verify property details, ensuring accurate tracking of tax rebates. We’re currently pitching JILA to towns across New Jersey to foster community engagement and economic growth.',
     },
     {
       id: 3,
@@ -173,11 +169,7 @@ function ProjectsSectionComponent() {
         'Project Finance',
         'Market Analysis',
       ],
-      details: `Greenstick represents a groundbreaking approach to financial education, utilizing artificial intelligence to create an engaging learning environment. Our platform offers interactive lessons and simulations that demystify complex financial concepts, empowering users to navigate the intricacies of the market with confidence.
-
-      I led the development of quant-based courses and algorithmic trading tools, collaborating closely with a talented team to deliver innovative educational resources. The integration of React.js, Chart.js, and TradingView widgets provided users with an immersive experience, while our AI bot offered personalized assistance, ensuring that learners received tailored support.
-
-      Through comprehensive research and development, we crafted a curriculum that not only covers trading strategies but also emphasizes the importance of risk management and market analysis, preparing users for real-world financial challenges.`,
+      details: 'At Greenstick, I co-founded and launched an AI-powered platform that teaches financial markets through interactive lessons and simulations. The platform covers strategies in stocks, options, futures trading, and more. I led the development of quant-based courses, algorithm generators, and trading signals, using technologies like React.js, Chart.js, and TradingView widgets for an immersive learning experience. We also integrated an AI chatbot to answer user questions, providing a personalized educational journey. My role included coordinating project finance, conducting market analysis, and initiating outreach campaigns to grow our user base and continuously enhance the platform.',
     },
     {
       id: 4,
@@ -199,11 +191,7 @@ function ProjectsSectionComponent() {
         'UI/UX Design',
         'Heroku Deployment',
       ],
-      details: `Books2Go is an innovative application designed to foster a culture of sharing and sustainability within communities. By allowing users to easily share their unused books, we aimed to reduce waste and promote literacy.
-
-      I was responsible for the front-end development using React Native, ensuring a user-friendly interface that encourages participation. The app allows users to add books by simply entering their ISBNs, making the process seamless and efficient. 
-
-      Our initiative gained recognition when we won first place in the Congressional App Challenge for our district, highlighting the impact of technology in addressing community needs. Books2Go not only connects readers but also cultivates a sense of community through the love of literature.`,
+      details: 'As the lead developer of Books2Go, I created an app to facilitate the sharing of unused books within the community. Built with React Native and MongoDB, the app allows users to sign up and list books they wish to share by simply entering the ISBN. Users can search for books by title and connect with others to borrow or receive books, promoting literacy and resource sharing locally. Books2Go won first place in the Congressional App Challenge for my district, recognized by Congressman Frank Pallone.',
     },
     {
       id: 5,
@@ -226,11 +214,7 @@ function ProjectsSectionComponent() {
         'Biotechnology',
         'Data Visualization',
       ],
-      details: `My research on Oral Squamous Cell Carcinoma (OSCC) at the Rutgers Cancer Institute focused on advancing early detection methodologies through the application of machine learning techniques. The findings were published in the Winter 2023 edition of Scholarly Review, contributing to the ongoing discourse in cancer research.
-
-      I employed advanced machine learning algorithms, including regularization and dropout layers, to develop a highly optimized model that significantly improved predictive accuracy while minimizing overfitting. My work also involved conducting a comprehensive study on planarian regeneration, exploring its implications for cancer treatment.
-
-      This research not only deepened my understanding of biotechnology but also underscored the potential of data-driven approaches in transforming healthcare outcomes, paving the way for future innovations in cancer detection and treatment.`,
+      details: 'I conducted and published research on Oral Squamous Cell Carcinoma (OSCC), focusing on early cancer detection using machine learning. Published in the Winter 2023 edition of Scholarly Review, my work utilized advanced techniques like regularization and dropout layers to enhance predictive accuracy while minimizing overfitting. This research contributes to advancing methodologies for early detection of OSCC, potentially improving patient outcomes.',
     },
   ];
 
