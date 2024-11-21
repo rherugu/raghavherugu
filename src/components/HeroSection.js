@@ -214,7 +214,7 @@ useEffect(() => {
     let currentIndex = 0;
     
     const typeNextChar = () => {
-      if (currentIndex < fullText.length && isMounted) {
+      if (currentIndex < fullText.length-1 && isMounted) {
         // More natural typing speed with variation
         const baseDelay = 10;
         const randomVariation = Math.random() * 40;
