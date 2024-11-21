@@ -51,8 +51,10 @@ const ModalWrapper = styled(motion.div)`
   
   @media (max-width: 768px) {
     width: 75%;
-    height: 75vh;
+    height: auto;
     grid-template-columns: 1fr;
+    transform: scale(0.75);
+    transform-origin: center;
   }
 `;
 
@@ -71,15 +73,15 @@ const SidePanel = styled(motion.div)`
 `;
 
 const MainContent = styled(motion.div)`
-  padding: 50px;
+  padding: 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  max-height: calc(90vh - 120px);
+  max-height: calc(75vh - 40px);
 
   @media (max-width: 768px) {
-    padding: 20px;
-    max-height: calc(75vh - 100px);
+    padding: 15px;
+    max-height: calc(75vh - 60px);
   }
 `;
 
@@ -97,6 +99,10 @@ const AnimatedTitle = styled(motion.h2)`
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const TechTag = styled(motion.span)`
@@ -107,6 +113,11 @@ const TechTag = styled(motion.span)`
   margin: 5px;
   font-family: 'Space Mono', monospace;
   border: 1px solid #ff7e5f;
+
+  @media (max-width: 768px) {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 `;
 
 const InteractiveButton = styled(motion.a)`
@@ -124,6 +135,11 @@ const InteractiveButton = styled(motion.a)`
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(49, 130, 206, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 0.8rem;
   }
 `;
 

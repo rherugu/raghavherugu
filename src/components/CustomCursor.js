@@ -1,5 +1,5 @@
 // components/CustomCursor.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 const Cursor = styled.div`
@@ -19,14 +19,25 @@ const Cursor = styled.div`
 
 function CustomCursor() {
   const cursorRef = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    document.addEventListener('mousemove', (e) => {
+    // Check if the device has a touch screen
+    const touchDevice = window.matchMedia("(pointer: coarse)").matches;
+    setIsTouchDevice(touchDevice);
+
+    if (touchDevice) {
+      return; // Exit if it's a touch device
+    }
+
+    const handleMouseMove = (e) => {
       if (cursorRef.current) {
         cursorRef.current.style.top = `${e.clientY}px`;
         cursorRef.current.style.left = `${e.clientX}px`;
       }
-    });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
 
     const interactiveElements = document.querySelectorAll('a, button');
 
@@ -44,9 +55,18 @@ function CustomCursor() {
         }
       });
     });
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      interactiveElements.forEach((el) => {
+        el.removeEventListener('mouseover', () => {});
+        el.removeEventListener('mouseleave', () => {});
+      });
+    };
   }, []);
 
-  return <Cursor ref={cursorRef} />;
+  // Return null for touch devices, otherwise render the cursor
+  return isTouchDevice ? null : <Cursor ref={cursorRef} />;
 }
 
 export default CustomCursor;
