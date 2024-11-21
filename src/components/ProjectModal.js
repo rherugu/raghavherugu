@@ -49,6 +49,10 @@ const ModalWrapper = styled(motion.div)`
     0 25px 50px rgba(0, 0, 0, 0.3),
     0 0 100px rgba(76, 175, 255, 0.2);
   
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 `;
 
 const SidePanel = styled(motion.div)`
@@ -70,6 +74,12 @@ const MainContent = styled(motion.div)`
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  max-height: calc(90vh - 120px);
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-height: calc(90vh - 100px);
+  }
 `;
 
 const TechIcon = styled(motion.div)`
