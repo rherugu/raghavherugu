@@ -50,8 +50,9 @@ const ModalWrapper = styled(motion.div)`
     0 0 100px rgba(76, 175, 255, 0.2);
   
   @media (max-width: 768px) {
+    width: 75%;
+    height: 75vh;
     grid-template-columns: 1fr;
-    height: auto;
   }
 `;
 
@@ -78,7 +79,7 @@ const MainContent = styled(motion.div)`
 
   @media (max-width: 768px) {
     padding: 20px;
-    max-height: calc(90vh - 100px);
+    max-height: calc(75vh - 100px);
   }
 `;
 
