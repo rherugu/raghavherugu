@@ -164,13 +164,18 @@ const TypewriterText = styled.div`
   white-space: pre-wrap;
   position: relative;
 
-  &::after {
-    content: '|';
-    animation: ${TypewriterCursor} 0.7s infinite;
-    display: inline-block;
-  }
+ 
 `;
-
+const Cursor = styled.span`
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: black;
+  animation: ${keyframes`
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  `} 0.7s infinite;
+`;
 
 const BackButton = styled(motion.button)`
   position: absolute;
@@ -188,6 +193,7 @@ const BackButton = styled(motion.button)`
 function HeroSection() {
   const [showISTEMSection, setShowISTEMSection] = useState(false);
   const [displayText, setDisplayText] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const fullText = ` Choosing iSTEM at the Stevens Institute of Technology is driven by a profound desire to harness technology for meaningful impact. My journey into computer science began with a little girl. It wasn’t the typical request you’d expect from someone like her. Her idea was to create a library of books that had characters of different races, religions, and abilities to spread awareness, acceptance, and unity. It was called “Madison’s Magical Library.” With a truck full of books and no way to efficiently distribute them, her mother reached out to me. At the time, I had only minimal knowledge of building apps. Suddenly, I was tasked with creating a full-stack mobile application to automate the entire process. I had less than two months and a lot to learn. In this challenge, I found something deeper than just coding—this was a chance to use technology to solve real-world problems, and I was hooked.
 
 Overcoming the challenges was far from easy. I spent countless nights immersed in code, acquainting myself with unfamiliar tools, and grappling with self-doubt about my ability to succeed. Yet, this process captivated me. This wasn’t just about programming; it was about tackling a real problem and seeing technology make a real difference. Although the app never ended up being used, it showed me what it means to bring an idea to life. I realized that this is what I want to do, and whether it is developing applications that promote diversity or creating algorithms to pursue other passions, I am committed to leveraging my skills to make a positive and lasting impact.
@@ -200,38 +206,58 @@ I also realize iSTEM isn’t just about hitting home runs. It’s about pushing 
 
 It’s about understanding that even the smallest effort can spark meaningful change, and that the journey shapes us as much as the destination. And the fact that I could even make an impact on one little girl, let alone hundreds of people, made me feel unstoppable.`;
 
-  useEffect(() => {
-    let isMounted = true;
-    const typeText = () => {
-      let currentIndex = 0;
-      const typeNextChar = () => {
-        if (currentIndex < fullText.length-1 && isMounted) {
+useEffect(() => {
+  let isMounted = true;
+  let timeoutId;
+
+  const typeText = () => {
+    let currentIndex = 0;
+    
+    const typeNextChar = () => {
+      if (currentIndex < fullText.length && isMounted) {
+        // More natural typing speed with variation
+        const baseDelay = 10;
+        const randomVariation = Math.random() * 40;
+        const delay = baseDelay + randomVariation;
+
+        timeoutId = setTimeout(() => {
           setDisplayText(prevText => prevText + fullText[currentIndex]);
           currentIndex++;
-          // Randomize typing speed to make it more natural
-          setTimeout(typeNextChar, Math.random() * .00001);
-        }
-      };
-      typeNextChar();
+          
+          // Continue typing
+          if (currentIndex < fullText.length) {
+            typeNextChar();
+          } else {
+            // Typing complete
+            setIsTypingComplete(true);
+          }
+        }, delay);
+      }
     };
 
-    if (showISTEMSection) {
-      typeText();
-    }
-
-    return () => {
-      isMounted = false;
-    };
-  }, [showISTEMSection]);
-
-  const handleWhyISTEMClick = () => {
-    setShowISTEMSection(true);
+    typeNextChar();
   };
 
-  const handleGoBack = () => {
-    setShowISTEMSection(false);
-    setDisplayText('');
+  if (showISTEMSection) {
+    typeText();
+  }
+
+  return () => {
+    isMounted = false;
+    if (timeoutId) clearTimeout(timeoutId);
   };
+}, [showISTEMSection]);
+
+const handleWhyISTEMClick = () => {
+  setShowISTEMSection(true);
+};
+
+const handleGoBack = () => {
+  setShowISTEMSection(false);
+  setDisplayText('');
+  setIsTypingComplete(false);
+};
+
 
 
 
@@ -284,6 +310,7 @@ It’s about understanding that even the smallest effort can spark meaningful ch
             <ScrollableContent>
               <TypewriterText>
                 {displayText}
+                {!isTypingComplete && <Cursor />}
               </TypewriterText>
             </ScrollableContent>
           </WhiteSection>
