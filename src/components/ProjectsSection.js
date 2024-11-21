@@ -123,7 +123,7 @@ function ProjectsSectionComponent() {
         'https://patch.com/new-jersey/marlboro-coltsneck/marlboro-family-develops-app-support-small-businesses',
         'https://www.marlboro-nj.gov/local-main-street-gift-card-program?highlight=WyJsb2NhbCIsIm1haW4iLCJzdHJlZXQiXQ=='
       ],
-      details: 'I founded LocalMainStreet to support small businesses during the COVID-19 crisis. The platform enabled customers to purchase digital gift cards and vouchers from local shops, providing immediate income to businesses affected by lockdowns. I developed both the website and mobile app using React.js and MongoDB, integrating secure payment processing with Stripe. By going door-to-door and leveraging social media, I onboarded over 90 local businesses, many of them minority-owned. The initiative was endorsed by the township and recognized on their website, helping to strengthen our community during challenging times.',
+      details: 'My brother and I founded LocalMainStreet to support small businesses during the COVID-19 crisis. The platform enabled customers to purchase digital gift cards and vouchers from local shops, providing immediate income to businesses affected by lockdowns. We developed both the website and mobile app using React.js and MongoDB, integrating secure payment processing with Stripe. By going door-to-door and leveraging social media, we onboarded over 90 local businesses, many of them minority-owned. The initiative was endorsed by the mayor and recognized on their website, helping to strengthen our community during challenging times.',
     },
     {
       id: 2,
