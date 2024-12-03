@@ -197,7 +197,7 @@ function ProjectsSectionComponent() {
       id: 5,
       title: 'OSCC Research',
       description:
-        'Conducted research on Oral Squamous Cell Carcinoma at the Rutgers Cancer Institute.',
+        'Conducted research on Oral Squamous Cell Carcinoma',
       image: require('../assets/oscc.png'),
       tools: [
         'Python',
